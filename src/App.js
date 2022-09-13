@@ -12,7 +12,7 @@ export default function App() {
         container
         justifyContent="center"
         direction="row"
-        alignItems="center"
+        //alignItems="center"
       >
         <Grid
           item
@@ -26,7 +26,17 @@ export default function App() {
         >
           <DeltaSecond />
         </Grid>
-        <Grid item md={1} xs={1} sm={1} lg={1}>
+        <Grid
+          item
+          md={1}
+          xs={1}
+          sm={1}
+          lg={1}
+          backgroundColor="#0078AE"
+          style={{
+            height: "100vh",
+          }}
+        >
           <Sidebar />
         </Grid>
       </Grid>

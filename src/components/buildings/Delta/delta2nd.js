@@ -235,8 +235,8 @@ const option2 = {
     series: {
       states: {
         hover: {
-          backgroundColor: "pink",
-          enabled: false,
+          backgroundColor: "blue",
+          enabled: true,
         },
       },
       showInLegend: false,
@@ -271,7 +271,8 @@ const option2 = {
     },
   },
 };
-export default function DeltaSecond() {
+export default function DeltaSecond({ popup }) {
+  console.log(`The value I am getting inside of Sidebar is ${popup}`);
   return (
     <>
       <HighchartsReact

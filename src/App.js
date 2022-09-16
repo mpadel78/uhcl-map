@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Welcome from "./components/welcome";
 import DeltaWelcome from "./components/buildings/Delta/welcome";
 import DeltaSecond from "./components/buildings/Delta/delta2nd";
@@ -6,6 +7,11 @@ import Grid from "@mui/material/Grid";
 import Sidebar from "./components/Sidebar";
 
 export default function App() {
+  const [popup, setPopup] = useState("");
+  const handleAction = (hello) => {
+    setPopup(hello);
+    console.log(popup);
+  };
   return (
     <div className="App">
       <Grid
@@ -24,7 +30,7 @@ export default function App() {
             height: "100vh",
           }}
         >
-          <DeltaSecond />
+          <DeltaSecond popup={popup} />
         </Grid>
         <Grid
           item
@@ -37,7 +43,7 @@ export default function App() {
             height: "100vh",
           }}
         >
-          <Sidebar />
+          <Sidebar handleClick={handleAction} />
         </Grid>
       </Grid>
     </div>
